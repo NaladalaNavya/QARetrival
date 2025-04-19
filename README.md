@@ -1,14 +1,42 @@
-# RetrievalQA System with OpenAI and Pinecone,langchain
+## 🧠 Medical Textbook QA System using LangChain, Pinecone & OpenAI
 
-This repository contains the code for building a RetrievalQA system using OpenAI's language models and Pinecone's vector database. The system is designed to efficiently retrieve and answer questions based on the content of large PDF documents.
+This project enables intelligent **question-answering** on a medical textbook PDF by leveraging **LangChain**, **OpenAI embeddings**, and **Pinecone vector store**. It allows users to ask natural language queries and retrieves the most relevant answers using a powerful vector search + LLM pipeline.
 
-## Table of Contents
-- [Overview](#overview)
-- [Setup and Installation](#setup-and-installation)
-- [Usage](#usage)
-- [Example Queries](#example-queries)
-- [Contributing](#contributing)
-- [License](#license)
+
+### 🚀 Features
+
+- 📄 Loads and parses a PDF medical textbook using `UnstructuredPDFLoader`.
+- 🧩 Splits the text into chunks using `RecursiveCharacterTextSplitter`.
+- 🧠 Creates embeddings using OpenAI’s `text-embedding-ada-002` model.
+- 📦 Stores and indexes documents in **Pinecone** for fast retrieval.
+- 🤖 Uses **LangChain’s RetrievalQA chain** to answer user queries based on the PDF.
+- 🔍 Handles real-time questions like symptoms, disease info, medication use, and more.
+
+
+### 📁 How It Works
+
+1. **Document Loading**  
+   Load the medical textbook PDF using LangChain’s `UnstructuredPDFLoader`.
+
+2. **Text Splitting**  
+   The content is split into manageable chunks using `RecursiveCharacterTextSplitter`.
+
+3. **Embedding Generation**  
+   Chunks are converted into high-dimensional vectors using `OpenAIEmbeddings`.
+
+4. **Vector Storage**  
+   The embeddings are stored in a **Pinecone index**, enabling semantic search.
+
+5. **Retrieval QA**  
+   User queries are matched against indexed vectors. The most relevant chunks are passed to an OpenAI model to generate answers.
+
+### 🧪 Example Queries
+
+```python
+query = "Explain about the Skin Diseases?"
+query = "What is the Tablet used to cure headache?"
+query = "What are the Symptoms of fever?"
+```
 
 ## Overview
 
