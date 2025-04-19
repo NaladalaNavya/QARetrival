@@ -30,14 +30,6 @@ This project enables intelligent **question-answering** on a medical textbook PD
 5. **Retrieval QA**  
    User queries are matched against indexed vectors. The most relevant chunks are passed to an OpenAI model to generate answers.
 
-### 🧪 Example Queries
-
-```python
-query = "Explain about the Skin Diseases?"
-query = "What is the Tablet used to cure headache?"
-query = "What are the Symptoms of fever?"
-```
-
 ## Overview
 
 The RetrievalQA system is built using the following key technologies:
@@ -77,7 +69,10 @@ The system performs the following steps:
     python main.py
     ```
 
-2. **Example Queries:**
-    - "Explain about skin diseases."
-    - "What is the tablet used to cure headaches?"
-    - "What are the symptoms of fever?"
+### 🧪 Example Queries
+
+```python
+query = "Explain about the Skin Diseases?"
+query = "What is the Tablet used to cure headache?"
+query = "What are the Symptoms of fever?"
+```
